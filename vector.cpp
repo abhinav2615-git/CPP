@@ -16,7 +16,18 @@ int main(){
     v4.push_back(110);
     v4.push_back(120);
     v4.push_back(130);
-    for(int i=0;i<=v.size();i++){
-        cout<<v[i]<<",";
+
+    vector<vector<int>>vv;
+    vv.push_back(v1);
+    vv.push_back(v2);
+    vv.push_back(v3);
+    vv.push_back(v4);
+
+
+    for(int i=0;i<=4;i++){
+        for(int j=0;j<vv[i].size();j++){
+            cout<<vv[i][j]<<"\t";
+        }
+        cout<<"\n";
     }
 }
