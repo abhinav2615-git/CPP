@@ -68,16 +68,33 @@ using namespace std;
 // }
 
 // Print all Divisors
-void divisors(int n){
-    for(int i=0;i<=sqrt(n);i++){
+// void divisors(int n){
+//     for(int i=0;i<=sqrt(n);i++){
+//         if(n%i==0){
+//             cout<<i<<" "<<(n/i)<<endl;
+//         }
+//     }
+// }
+// int main(){
+//     int n;
+//     cout<<"Enter the number"<<endl;
+//     cin>>n;
+//     divisors(n);
+// }
+
+// Prime Number check
+void prime(int n){
+    for(int i=2;i<n;i++){
         if(n%i==0){
-            cout<<i<<" "<<(n/i)<<endl;
+            cout<<"The number is not prime."<<endl;
+            break;
         }
     }
+    cout<<"The number is prime."<<endl;
 }
 int main(){
     int n;
     cout<<"Enter the number"<<endl;
     cin>>n;
-    divisors(n);
+    prime(n);
 }
