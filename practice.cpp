@@ -101,20 +101,36 @@ using namespace std;
 
 // Recursion:
 // Print name 5 times.
-void name(string str,int n,int i){
-    if(i>n){
-        return;
-    }
-    cout<<str<<endl;
-    name(str,n,i+1);
-}
-int main(){
-    string str;
-    int i=1;
-    int n;
-    cout<<"Enter the number"<<endl;
-    cin>>n;
-    cout<<"Enter the string"<<endl;
-    cin>>str;
-    name(str,n,i);
-}
+// void name(string str,int n,int i){
+//     if(i>n){
+//         return;
+//     }
+//     cout<<str<<endl;
+//     name(str,n,i+1);
+// }
+// int main(){
+//     string str;
+//     int i=1;
+//     int n;
+//     cout<<"Enter the number"<<endl;
+//     cin>>n;
+//     cout<<"Enter the string"<<endl;
+//     cin>>str;
+//     name(str,n,i);
+// }
+
+// Print linearly from 1 to n
+// void print(int n,int i){
+//     if(i>n){
+//         return;
+//     }
+//     cout<<i<<endl;
+//     print(n,i+1);
+// }
+// int main(){
+//     int i=1;
+//     int n;
+//     cout<<"Enter the number"<<endl;
+//     cin>>n;
+//     print(n,i);
+// }
