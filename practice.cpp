@@ -83,18 +83,38 @@ using namespace std;
 // }
 
 // Prime Number check
-void prime(int n){
-    for(int i=2;i<n;i++){
-        if(n%i==0){
-            cout<<"The number is not prime."<<endl;
-            break;
-        }
+// void prime(int n){
+//     for(int i=2;i<n;i++){
+//         if(n%i==0){
+//             cout<<"The number is not prime."<<endl;
+//             break;
+//         }
+//     }
+//     cout<<"The number is prime."<<endl;
+// }
+// int main(){
+//     int n;
+//     cout<<"Enter the number"<<endl;
+//     cin>>n;
+//     prime(n);
+// }
+
+// Recursion:
+// Print name 5 times.
+void name(string str,int n,int i){
+    if(i>n){
+        return;
     }
-    cout<<"The number is prime."<<endl;
+    cout<<str<<endl;
+    name(str,n,i+1);
 }
 int main(){
+    string str;
+    int i=1;
     int n;
     cout<<"Enter the number"<<endl;
     cin>>n;
-    prime(n);
+    cout<<"Enter the string"<<endl;
+    cin>>str;
+    name(str,n,i);
 }
