@@ -150,6 +150,8 @@ using namespace std;
 //     cin>>n;
 //     print(n,i);
 // }
+
+// Sum of n numbers
 // int sum(int n)
 // {
 //     if (n <= 1)
@@ -167,19 +169,19 @@ using namespace std;
 // }
 
 // Factorial of n numbers
-int fact(int n){
-    if(n<=0){
-        return 0;
-    }
-    else if (n==1){
-        return 1;
-    }
-    return n*fact(n-1);
-}
-int main()
-{
-    int n;
-    cout << "Enter the number" << endl;
-    cin >> n;
-    cout << fact(n);
-}
+// int fact(int n){
+//     if(n<=0){
+//         return 0;
+//     }
+//     else if (n==1){
+//         return 1;
+//     }
+//     return n*fact(n-1);
+// }
+// int main()
+// {
+//     int n;
+//     cout << "Enter the number" << endl;
+//     cin >> n;
+//     cout << fact(n);
+// }
