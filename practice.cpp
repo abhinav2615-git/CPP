@@ -136,17 +136,32 @@ using namespace std;
 // }
 
 // Print linearly from n to 1
-void print(int n,int i){
-    if(n<i){
-        return;
+// void print(int n,int i){
+//     if(n<i){
+//         return;
+//     }
+//     cout<<n<<endl;
+//     print(n-1,i);
+// }
+// int main(){
+//     int i=1;
+//     int n;
+//     cout<<"Enter the number"<<endl;
+//     cin>>n;
+//     print(n,i);
+// }
+int sum(int n)
+{
+    if (n <= 1)
+    {
+        return n;
     }
-    cout<<n<<endl;
-    print(n-1,i);
+    return n + sum(n - 1);
 }
-int main(){
-    int i=1;
+int main()
+{
     int n;
-    cout<<"Enter the number"<<endl;
-    cin>>n;
-    print(n,i);
+    cout << "Enter the number" << endl;
+    cin >> n;
+    cout << sum(n);
 }
