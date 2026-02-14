@@ -19,7 +19,7 @@ int main()
         cout << x << " ";
     }
     cout<<endl<<"Reversed array"<<endl;
-    for(int i=0;i<n/2;i++){
+    for(int i=0;i<=n/2;i++){
         swap(v1[i],v1[n-1]);
         n--;
     }
