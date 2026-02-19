@@ -20,18 +20,37 @@ int main(){
     // cout<<p.second;
 
 
-    vector<pair<int,string>>v;
-    v.push_back({10,"A"});
-    v.push_back({20,"B"});
-    v.push_back({30,"C"});
-    v.push_back({40,"D"});
-    v.push_back({50,"E"});
+    // vector<pair<int,string>>v;
+    // v.push_back({10,"A"});
+    // v.push_back({20,"B"});
+    // v.push_back({30,"C"});
+    // v.push_back({40,"D"});
+    // v.push_back({50,"E"});
 
-    for(int i =0;i<v.size();i++){
-        pair<int,string>p;
-        p=v[i];
-        cout<<p.first;
-        cout<<" ";
-        cout<<p.second;
+    // for(int i =0;i<v.size();i++){
+    //     pair<int,string>p;
+    //     p=v[i];
+    //     cout<<p.first;
+    //     cout<<" ";
+    //     cout<<p.second;
+    // }
+
+
+    queue<pair<int,string>>Q;
+    Q.push({10,"A"});
+    Q.push({20,"B"});
+    Q.push({30,"C"});
+    Q.push({40,"D"});
+    Q.push({50,"E"});
+    Q.push({60,"F"});
+    Q.push({70,"G"});
+    Q.push({80,"H"});
+    Q.push({90,"I"});
+
+    while(!Q.empty()){
+        pair<int,string>P;
+        P=Q.front();
+        cout<<P.first<<", "<<P.second<<endl;
+        Q.pop();
     }
 }
