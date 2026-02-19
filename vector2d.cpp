@@ -12,10 +12,26 @@ int main(){
     //     cout<<endl;
     // }
 
-    
-    pair<int,string>p;
-    p={10,"Abhinav"};
-    cout<<p.first;
-    cout<<" ";
-    cout<<p.second;
+
+    // pair<int,string>p;
+    // p={10,"Abhinav"};
+    // cout<<p.first;
+    // cout<<" ";
+    // cout<<p.second;
+
+
+    vector<pair<int,string>>v;
+    v.push_back({10,"A"});
+    v.push_back({20,"B"});
+    v.push_back({30,"C"});
+    v.push_back({40,"D"});
+    v.push_back({50,"E"});
+
+    for(int i =0;i<v.size();i++){
+        pair<int,string>p;
+        p=v[i];
+        cout<<p.first;
+        cout<<" ";
+        cout<<p.second;
+    }
 }
