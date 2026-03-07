@@ -3,7 +3,9 @@
 #include <climits>
 using namespace std;
 
-int selection(int arr[], int size)
+
+//Selection Sort
+void selection(int arr[], int size)
 {
     for (int i = 0; i < size - 2; i++)
     {
@@ -18,6 +20,9 @@ int selection(int arr[], int size)
         swap(arr[i], arr[minIndex]);
     }
 }
+
+
+//Bubble Sort
 void bubble(int arr[], int size){
     for (int i = size - 1; i > 0; i--){
         int swapCount=0;
@@ -32,12 +37,28 @@ void bubble(int arr[], int size){
         }
     }
 }
+
+
+//Insertion Sort
+void insertion(int arr[], int size){
+    for(int i = 1; i < size; i++){
+        int j = i;
+        while(j > 0 && arr[j-1] > arr[j]){
+            swap(arr[j], arr[j-1]);
+            j--;
+        }
+    }
+}
+
+
+
 int main()
 {
     int size;
     cout << "Enter the size of array" << endl;
     cin >> size;
     int arr[size];
+    cout<<"Enter the element:"<<endl;
     for (int i = 0; i < size; i++)
     {
         cin >> arr[i];
@@ -48,7 +69,7 @@ int main()
         cout << arr[i] << " ";
     }
 
-    selection(arr, size);
+    insertion(arr, size);
 
     cout << endl
          << "Array after sort:" << endl;
