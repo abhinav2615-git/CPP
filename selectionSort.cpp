@@ -18,7 +18,20 @@ int selection(int arr[], int size)
         swap(arr[i], arr[minIndex]);
     }
 }
-
+void bubble(int arr[], int size){
+    for (int i = size - 1; i > 0; i--){
+        int swapCount=0;
+        for(int j=0;j<=i-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+                swapCount=1;
+            }
+        }
+        if(swapCount==0){
+            break;
+        }
+    }
+}
 int main()
 {
     int size;
