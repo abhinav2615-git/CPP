@@ -1,8 +1,9 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
-class Teacher{
+class Teacher
+{
 private:
     string dept;
     int salary;
@@ -10,31 +11,45 @@ private:
 
 public:
     // Non-parameterized Constructor
-    Teacher(){
+    Teacher()
+    {
         dept = "Computer Science";
-        cout<<"Department allotted : "<<dept<<endl;
+        cout << "Department allotted : " << dept << endl;
     }
 
     // Parameterised Constructor
-    Teacher(string n, int i){
+    Teacher(string n, int i)
+    {
         name = n;
         id = i;
     }
     string name;
     int id;
 
-    double setSalary(double s){
+    // Copy Constructor
+    Teacher(Teacher &orgObj){
+        this->name = orgObj.name;
+        this->id = orgObj.id;
+        this->salary = orgObj.salary;
+    }
+
+    double setSalary(double s)
+    {
         salary = s;
         return salary;
     }
-    void info(){
-        cout<<"Name : "<<name<<endl;
-        cout<<"Id : "<<id<<endl;
+    void info()
+    {
+        cout << "Name : " << name << endl;
+        cout << "Id : " << id << endl;
     }
 };
 
-int main(){
+int main()
+{
     Teacher t1("Abhinav Gupta", 33);
     t1.info();
-    cout<<"The salary is: "<<t1.setSalary(25000);
+    cout << "The salary is: " << t1.setSalary(25000)<<endl;
+    Teacher t2(t1);
+    t2.info();
 }
