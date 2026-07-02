@@ -60,7 +60,7 @@ public:
         cout<<"Object Created for Person"<<endl;
     }
     ~Person(){
-        cout<<"Destructor is called"<<endl;
+        cout<<"Destructor is called for Parent class."<<endl;
     }
 };
 
@@ -76,6 +76,9 @@ public:
 
     Student(){
         cout<<"Object Created for Student."<<endl;
+    }
+    ~Student(){
+        cout<<"Destructor is called for Child class."<<endl;
     }
 };
 
@@ -101,8 +104,8 @@ int main()
     s1.getinfo();
 
     p1.name = "Changed";
-    cout << p1.name;
-    cout << s1.name;
+    cout << p1.name<<endl;;
+    cout << s1.name<<endl;;
 
     return 0;
 }
