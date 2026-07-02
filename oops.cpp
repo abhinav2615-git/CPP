@@ -2,8 +2,7 @@
 #include <string>
 using namespace std;
 
-class Teacher
-{
+class Teacher1{
 private:
     string dept;
     int salary;
@@ -11,14 +10,14 @@ private:
 
 public:
     // Non-parameterized Constructor
-    Teacher()
+    Teacher1()
     {
         dept = "Computer Science";
         cout << "Department allotted : " << dept << endl;
     }
 
     // Parameterised Constructor
-    Teacher(string n, int i)
+    Teacher1(string n, int i)
     {
         name = n;
         id = i;
@@ -27,7 +26,7 @@ public:
     int id;
 
     // Copy Constructor
-    Teacher(Teacher &orgObj){
+    Teacher1(Teacher1 &orgObj){
         this->name = orgObj.name;
         this->id = orgObj.id;
         this->salary = orgObj.salary;
@@ -64,7 +63,7 @@ public:
     }
 };
 
-class Student : public Person{
+class Student1 : public Person{
 public:
     int rollno;
 
@@ -74,11 +73,36 @@ public:
         cout<<"Roll Number : "<<rollno<<endl;
     }
 
-    Student(){
+    Student1(){
         cout<<"Object Created for Student."<<endl;
     }
-    ~Student(){
+    ~Student1(){
         cout<<"Destructor is called for Child class."<<endl;
+    }
+};
+
+//Multiple-Inheritance
+class Student2{
+public:
+    string name;
+    int roll;
+};
+
+class Teacher2{
+public:
+    string subject;
+    double salary;
+};
+
+class TeacherAssistant : public Student2, public Teacher2{
+public:
+    string branch;
+
+    void getinfo(){
+        cout<<"Name : "<<name<<endl;
+        cout<<"Roll Number : "<<roll<<endl;
+        cout<<"Subject : "<<subject<<endl;
+        cout<<"Salary : "<<salary<<endl;
     }
 };
 
@@ -91,21 +115,26 @@ int main()
     // t2.info();
 
     //Inheritance
+    // Person p1;
+    // p1.name = "Abhi";
+    // p1.age = 21;
+    // p1.getinfo();
+    // Student1 s1;
+    // s1.name = "Abhinav";
+    // s1.age = 20;
+    // s1.rollno = 33;
+    // s1.getinfo();
+    // p1.name = "Changed";
+    // cout << p1.name<<endl;;
+    // cout << s1.name<<endl;;
 
-    Person p1;
-    p1.name = "Abhi";
-    p1.age = 21;
-    p1.getinfo();
-
-    Student s1;
-    s1.name = "Abhinav";
-    s1.age = 20;
-    s1.rollno = 33;
-    s1.getinfo();
-
-    p1.name = "Changed";
-    cout << p1.name<<endl;;
-    cout << s1.name<<endl;;
+    //Multiple-Inheritance
+    TeacherAssistant ta1;
+    ta1.name = "Abhinav";
+    ta1.roll = 33;
+    ta1.subject = "Computer Science";
+    ta1.salary = 89003.54;
+    ta1.getinfo();
 
     return 0;
 }
