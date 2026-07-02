@@ -59,6 +59,9 @@ public:
     Person(){
         cout<<"Object Created for Person"<<endl;
     }
+    ~Person(){
+        cout<<"Destructor is called"<<endl;
+    }
 };
 
 class Student : public Person{
