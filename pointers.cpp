@@ -2,8 +2,13 @@
 using namespace std;
 
 //Pass by Refernce
-void changeX(int* ptr){
-    *ptr = 20;
+// void changeX(int* ptr){
+//     *ptr = 20;
+// }
+
+//Pass by Alias
+void changeX(int &a){
+    a = 20;
 }
 
 int main(){
@@ -33,6 +38,6 @@ int main(){
 
     //Pass by Reference
     int x = 10;
-    changeX(&x);
+    changeX(x);
     cout << x << endl;
 }
