@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+//Pass by Refernce
+void changeX(int* ptr){
+    *ptr = 20;
+}
+
 int main(){
 
     //Pointers
@@ -18,11 +23,16 @@ int main(){
     // cout << ptr2 << endl;
 
     //Practice Question
-    int a = 5;
-    int *p = &a;
-    int **q = &p;
-    cout << *p << endl;
-    cout << **q << endl;
-    cout << p << endl;
-    cout << *q << endl;
+    // int a = 5;
+    // int *p = &a;
+    // int **q = &p;
+    // cout << *p << endl;
+    // cout << **q << endl;
+    // cout << p << endl;
+    // cout << *q << endl;
+
+    //Pass by Reference
+    int x = 10;
+    changeX(&x);
+    cout << x << endl;
 }
