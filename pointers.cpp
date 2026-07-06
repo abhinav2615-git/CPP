@@ -10,11 +10,19 @@ int main(){
     // cout<<&x<<endl;
 
     //Pointers to Pointers
-    int y = 10;
-    int* ptr = &y;
-    int** ptr2 = &ptr;
+    // int y = 10;
+    // int* ptr = &y;
+    // int** ptr2 = &ptr;
+    // cout << &y << endl;
+    // cout << ptr << endl;
+    // cout << ptr2 << endl;
 
-    cout << &y << endl;
-    cout << ptr << endl;
-    cout << ptr2 << endl;
+    //Practice Question
+    int a = 5;
+    int *p = &a;
+    int **q = &p;
+    cout << *p << endl;
+    cout << **q << endl;
+    cout << p << endl;
+    cout << *q << endl;
 }
