@@ -29,4 +29,15 @@ int main(){
 
     cout<<"Data : "<<third->data<<endl;
     cout<<"Address : "<<third->next<<endl;
+
+// Traversing the linked list
+
+    Node* temp = head;
+
+    while(temp != NULL){
+        cout<<"Data : "<<temp->data<<endl;
+        cout<<"Addres : "<<temp->next<<endl;
+
+        temp = temp->next;
+    }
 }
