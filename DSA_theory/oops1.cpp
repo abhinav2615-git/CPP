@@ -108,25 +108,25 @@ public:
 
 int main()
 {
-    // Teacher t1("Abhinav Gupta", 33);
-    // t1.info();
-    // cout << "The salary is: " << t1.setSalary(25000)<<endl;
-    // Teacher t2(t1);
-    // t2.info();
+    Teacher1 t1("Abhinav Gupta", 33);
+    t1.info();
+    cout << "The salary is: " << t1.setSalary(25000)<<endl;
+    Teacher1 t2(t1);
+    t2.info();
 
-    //Inheritance
-    // Person p1;
-    // p1.name = "Abhi";
-    // p1.age = 21;
-    // p1.getinfo();
-    // Student1 s1;
-    // s1.name = "Abhinav";
-    // s1.age = 20;
-    // s1.rollno = 33;
-    // s1.getinfo();
-    // p1.name = "Changed";
-    // cout << p1.name<<endl;;
-    // cout << s1.name<<endl;;
+    // Inheritance
+    Person p1;
+    p1.name = "Abhi";
+    p1.age = 21;
+    p1.getinfo();
+    Student1 s1;
+    s1.name = "Abhinav";
+    s1.age = 20;
+    s1.rollno = 33;
+    s1.getinfo();
+    p1.name = "Changed";
+    cout << p1.name<<endl;;
+    cout << s1.name<<endl;;
 
     //Multiple-Inheritance
     TeacherAssistant ta1;
