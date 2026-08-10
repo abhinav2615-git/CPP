@@ -15,7 +15,18 @@ public:
 
 int main(){
     Node* head = new Node(10);
+    Node* second = new Node(20);
+    Node* third = new Node(30);
+
+    head->next = second;
+    second->next = third;
 
     cout<<"Data : "<<head->data<<endl;
     cout<<"Address : "<<head->next<<endl;
+
+    cout<<"Data : "<<second->data<<endl;
+    cout<<"Address : "<<second->next<<endl;
+
+    cout<<"Data : "<<third->data<<endl;
+    cout<<"Address : "<<third->next<<endl;
 }
