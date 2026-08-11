@@ -21,23 +21,30 @@ int main(){
     head->next = second;
     second->next = third;
 
-    cout<<"Data : "<<head->data<<endl;
-    cout<<"Address : "<<head->next<<endl;
+    // cout<<"Data : "<<head->data<<endl;
+    // cout<<"Address : "<<head->next<<endl;
 
-    cout<<"Data : "<<second->data<<endl;
-    cout<<"Address : "<<second->next<<endl;
+    // cout<<"Data : "<<second->data<<endl;
+    // cout<<"Address : "<<second->next<<endl;
 
-    cout<<"Data : "<<third->data<<endl;
-    cout<<"Address : "<<third->next<<endl;
+    // cout<<"Data : "<<third->data<<endl;
+    // cout<<"Address : "<<third->next<<endl;
+
+
+// Inserting new node at start
+    
+    Node* newNode = new Node(5);
+    newNode->next = head;
+    head = newNode;
 
 // Traversing the linked list
-
-    Node* temp = head;
-
-    while(temp != NULL){
-        cout<<"Data : "<<temp->data<<endl;
-        cout<<"Addres : "<<temp->next<<endl;
-
-        temp = temp->next;
-    }
+    
+        Node* temp = head;
+    
+        while(temp != NULL){
+            cout<<"Data : "<<temp->data<<endl;
+            cout<<"Addres : "<<temp->next<<endl;
+    
+            temp = temp->next;
+        }
 }
